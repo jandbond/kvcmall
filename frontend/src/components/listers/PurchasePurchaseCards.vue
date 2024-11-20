@@ -9,7 +9,8 @@
             <v-row>
                 <v-list-item class="d-flex" style="background-color: white;">
                     <h1 class="align-self-center ml-3">Purchase</h1>
-                    <div class="secondary-text-color" style="margin-left:30px;">status(구매요청,구매취소요청,결제완료,결제취소)</div>
+                    <div class="secondary-text-color" style="margin-left:30px;">status(1,2,3,4)
+구매요청,구매취소요청,결제완료,결제취소</div>
                 </v-list-item>
             </v-row>
         </v-card>
@@ -107,7 +108,7 @@
                 'customerId': 0,
                 'voucherId': 0,
                 'amount': 0,
-                'date': '2024-11-20',
+                'date': '2024-11-21',
                 'status': '',
             }
         },

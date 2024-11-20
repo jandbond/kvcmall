@@ -164,14 +164,15 @@ export default {
         aggregate: [
             { 
                 title: 'Purchase', 
-                description: 'status(구매요청,구매취소요청,결제완료,결제취소)', 
+                description: 'status(1,2,3,4)
+구매요청,구매취소요청,결제완료,결제취소', 
                 key: 'purchases', 
                 route: '/purchases/purchases',
                 ImageUrl: '',
             },
             { 
                 title: 'Voucher', 
-                description: 'Voucher 상태(판매가능,판매불가)', 
+                description: 'Voucher 상태(Y/N)', 
                 key: 'vouchers', 
                 route: '/vouchers/vouchers',
                 ImageUrl: '',

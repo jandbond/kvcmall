@@ -9,7 +9,7 @@
             <v-row>
                 <v-list-item class="d-flex" style="background-color: white;">
                     <h1 class="align-self-center ml-3">Voucher</h1>
-                    <div class="secondary-text-color" style="margin-left:30px;">Voucher 상태(판매가능,판매불가)</div>
+                    <div class="secondary-text-color" style="margin-left:30px;">Voucher 상태(Y/N)</div>
                 </v-list-item>
             </v-row>
         </v-card>

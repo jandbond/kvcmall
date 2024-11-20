@@ -35,7 +35,6 @@ public class Voucher {
         PurchaseRequested purchaseRequested
     ) {
 
-        
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -43,7 +42,7 @@ public class Voucher {
         repository().save(voucher);
 
         */
-
+        
         /** Example 2:  finding and process
         
         repository().findById(purchaseRequested.get???()).ifPresent(voucher->{
@@ -54,15 +53,28 @@ public class Voucher {
 
          });
         */
+        repository().findById( Long.parseLong(purchaseRequested.getVoucherId()) ).ifPresent(voucher->{
+            // 상품권 발행금액을 초과하지 않도록 비교후 차감.
+            Long subTotalAmt = voucher.currentIssuedAmount + purchaseRequested.getAmount();
+            // 발행된 금액이 총 금액을 넘지 않도록 점검 후 증감
+            if (voucher.totalIssuedAmount >= subTotalAmt) {
+                voucher.setCurrentIssuedAmount(voucher.currentIssuedAmount + purchaseRequested.getAmount());
+                repository().save(voucher);
+            } else {
+                // 에러 처리
+            }
+ 
+         });
 
         
         
-        // repository().findById(purchaseRequested.getId()).ifPresent(voucher->{
+         purchaseRequested.getAmount();
+        // repository().findById(purchaseRequested.getVoucherId()).ifPresent(voucher->{
             
-        //     voucher.totalIssuedAmount - purchaseRequested.get
+        //     // voucher.setCurrentIssuedAmount(voucher.totalIssuedAmount - purchaseRequested.get);
 
-        //     voucher.setCurrentIssuedAmount(voucher.totalIssuedAmount - purchaseRequested.get);
             
+        //     currentIssuedAmount = purchaseRequested.
         //     repository().save(voucher);
 
 

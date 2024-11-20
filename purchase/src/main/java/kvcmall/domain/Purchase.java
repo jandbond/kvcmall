@@ -9,6 +9,8 @@ import kvcmall.domain.CancellationRequested;
 import kvcmall.domain.PurchaseRequested;
 import lombok.Data;
 
+import org.springframework.data.repository.CrudRepository;
+
 @Entity
 @Table(name = "Purchase_table")
 @Data
@@ -26,6 +28,22 @@ public class Purchase {
     private Long amount;
 
     private String status;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public Long getAmount() {
+        return amount;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 
     @PostPersist
     public void onPostPersist() {
@@ -55,6 +73,10 @@ public class Purchase {
             PurchaseRepository.class
         );
         return purchaseRepository;
+    }
+
+    public interface ProductRepository extends CrudRepository<Purchase, Long> {
+
     }
 }
 //>>> DDD / Aggregate Root

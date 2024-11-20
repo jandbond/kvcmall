@@ -39,6 +39,8 @@ public class PolicyHandler {
 
         // Sample Logic //
         Voucher.decreaseVoucherLimit(event);
+
+
     }
 
     @StreamListener(

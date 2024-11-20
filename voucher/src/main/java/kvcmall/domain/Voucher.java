@@ -34,6 +34,8 @@ public class Voucher {
     public static void decreaseVoucherLimit(
         PurchaseRequested purchaseRequested
     ) {
+
+        
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -53,6 +55,20 @@ public class Voucher {
          });
         */
 
+        
+        
+        // repository().findById(purchaseRequested.getId()).ifPresent(voucher->{
+            
+        //     voucher.totalIssuedAmount - purchaseRequested.get
+
+        //     voucher.setCurrentIssuedAmount(voucher.totalIssuedAmount - purchaseRequested.get);
+            
+        //     repository().save(voucher);
+
+
+        //  });
+
+        
     }
 
     //>>> Clean Arch / Port Method

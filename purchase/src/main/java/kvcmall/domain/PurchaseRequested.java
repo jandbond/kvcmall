@@ -12,6 +12,11 @@ import lombok.*;
 public class PurchaseRequested extends AbstractEvent {
 
     private Long id;
+    private Long customerId;
+    private Long voucherId;
+    private Long amount;
+    private Date date;
+    private String status;
 
     public PurchaseRequested(Purchase aggregate) {
         super(aggregate);

@@ -22,10 +22,13 @@
         data: () => ({
             headers: [
                 { text: "id", value: "id" },
+                { text: "customerId", value: "customerId" },
                 { text: "purchaseId", value: "purchaseId" },
-                { text: "customervoucherId", value: "customervoucherId" },
-                { text: "purchaseStatus", value: "purchaseStatus" },
-                { text: "customervoucherStatus", value: "customervoucherStatus" },
+                { text: "voucherId", value: "voucherId" },
+                { text: "voucherName", value: "voucherName" },
+                { text: "voucherAmount", value: "voucherAmount" },
+                { text: "voucherDate", value: "voucherDate" },
+                { text: "voucherStatus", value: "voucherStatus" },
             ],
             myPage : [],
         }),

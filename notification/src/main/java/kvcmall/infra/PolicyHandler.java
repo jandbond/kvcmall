@@ -17,9 +17,6 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class PolicyHandler {
 
-    @Autowired
-    NotificationRepository notificationRepository;
-
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
 
@@ -34,9 +31,8 @@ public class PolicyHandler {
         System.out.println(
             "\n\n##### listener Notify : " + voucherIssued + "\n\n"
         );
-
         // Sample Logic //
-        Notification.notify(event);
+
     }
 
     @StreamListener(
@@ -50,9 +46,8 @@ public class PolicyHandler {
         System.out.println(
             "\n\n##### listener Notify : " + voucherCanceled + "\n\n"
         );
-
         // Sample Logic //
-        Notification.notify(event);
+
     }
 }
 //>>> Clean Arch / Inbound Adaptor

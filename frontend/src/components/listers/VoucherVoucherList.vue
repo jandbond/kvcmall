@@ -44,10 +44,12 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ TotalIssuedAmount :  {{data.totalIssuedAmount }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ CurrentIssuedAmount :  {{data.currentIssuedAmount }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -118,6 +120,7 @@
             this.values = temp.data._embedded.vouchers;
             
             this.newValue = {
+                'name': '',
                 'totalIssuedAmount': 0,
                 'currentIssuedAmount': 0,
                 'status': '',

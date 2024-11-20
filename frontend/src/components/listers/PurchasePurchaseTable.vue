@@ -70,6 +70,7 @@
                     { text: "customerId", value: "customerId" },
                     { text: "voucherId", value: "voucherId" },
                     { text: "amount", value: "amount" },
+                    { text: "date", value: "date" },
                     { text: "status", value: "status" },
                 ],
             purchase : [],
@@ -88,9 +89,10 @@
             this.values = temp.data._embedded.purchases;
 
             this.newValue = {
-                'customerId': '',
-                'voucherId': '',
+                'customerId': 0,
+                'voucherId': 0,
                 'amount': 0,
+                'date': '2024-11-20',
                 'status': '',
             }
         },

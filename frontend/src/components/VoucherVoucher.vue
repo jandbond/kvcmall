@@ -16,6 +16,7 @@
         </v-card-title >        
 
         <v-card-text style="background-color: white;">
+            <String label="Name" v-model="value.name" :editMode="editMode" :inputUI="''"/>
             <Number label="TotalIssuedAmount" v-model="value.totalIssuedAmount" :editMode="editMode" :inputUI="''"/>
             <Number label="CurrentIssuedAmount" v-model="value.currentIssuedAmount" :editMode="editMode" :inputUI="''"/>
             <String label="Status" v-model="value.status" :editMode="editMode" :inputUI="''"/>
@@ -37,7 +38,14 @@
                     text
                     @click="save"
                 >
-                저장
+                    AddVoucher
+                </v-btn>
+                <v-btn
+                    color="primary"
+                    text
+                    @click="save"
+                >
+                    ModifyVoucher
                 </v-btn>
                 <v-btn
                     color="primary"

@@ -34,8 +34,7 @@ jobs:
           mvn clean package -f ./customervoucher/pom.xml
           mvn clean package -f ./payment/pom.xml
           mvn clean package -f ./notification/pom.xml
-          mvn clean package -f ./customerpage/pom.xml
-          mvn clean package -f ./customerlimit/pom.xml
+          mvn clean package -f ./mypage/pom.xml
 
       - name: Docker Build and push for Purchase
         uses: docker/build-push-action@v4
@@ -87,23 +86,13 @@ jobs:
             ghcr.io/${{ github.repository }}/notification:latest
             ghcr.io/${{ github.repository }}/notification:${{ github.ref_name }}
             
-      - name: Docker Build and push for Customerpage
+      - name: Docker Build and push for Mypage
         uses: docker/build-push-action@v4
         with:
-          context: ./customerpage
+          context: ./mypage
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/customerpage:latest
-            ghcr.io/${{ github.repository }}/customerpage:${{ github.ref_name }}
-            
-      - name: Docker Build and push for Customerlimit
-        uses: docker/build-push-action@v4
-        with:
-          context: ./customerlimit
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/${{ github.repository }}/customerlimit:latest
-            ghcr.io/${{ github.repository }}/customerlimit:${{ github.ref_name }}
+            ghcr.io/${{ github.repository }}/mypage:latest
+            ghcr.io/${{ github.repository }}/mypage:${{ github.ref_name }}
             

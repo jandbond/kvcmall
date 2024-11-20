@@ -104,6 +104,7 @@
             me.values = temp.data._embedded.payments;
             
             me.newValue = {
+                'purchaseId': 0,
                 'status': '',
             }
         },

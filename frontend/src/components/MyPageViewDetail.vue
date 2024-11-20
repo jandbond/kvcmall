@@ -7,16 +7,25 @@
 
         <v-card-text>
             <div>
-                <String label="PurchaseId" v-model="item.purchaseId" :editMode="editMode" @change="change" />
+                <Number label="CustomerId" v-model="item.customerId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="CustomervoucherId" v-model="item.customervoucherId" :editMode="editMode" @change="change" />
+                <Number label="PurchaseId" v-model="item.purchaseId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="PurchaseStatus" v-model="item.purchaseStatus" :editMode="editMode" @change="change" />
+                <Number label="VoucherId" v-model="item.voucherId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="CustomervoucherStatus" v-model="item.customervoucherStatus" :editMode="editMode" @change="change" />
+                <String label="VoucherName" v-model="item.voucherName" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="VoucherAmount" v-model="item.voucherAmount" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Date label="VoucherDate" v-model="item.voucherDate" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="VoucherStatus" v-model="item.voucherStatus" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
     </v-card>

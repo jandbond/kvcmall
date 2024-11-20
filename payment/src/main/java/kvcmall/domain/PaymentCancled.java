@@ -12,6 +12,8 @@ import lombok.*;
 public class PaymentCancled extends AbstractEvent {
 
     private Long id;
+    private Long purchaseId;
+    private String status;
 
     public PaymentCancled(Payment aggregate) {
         super(aggregate);

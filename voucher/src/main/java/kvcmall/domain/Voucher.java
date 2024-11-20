@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 import kvcmall.VoucherApplication;
+import kvcmall.domain.VoucherAdded;
+import kvcmall.domain.VoucherModified;
 import lombok.Data;
 
 @Entity
@@ -17,11 +19,25 @@ public class Voucher {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String name;
+
     private Long totalIssuedAmount;
 
     private Long currentIssuedAmount;
 
     private String status;
+
+    @PostPersist
+    public void onPostPersist() {
+        VoucherAdded voucherAdded = new VoucherAdded(this);
+        voucherAdded.publishAfterCommit();
+    }
+
+    @PreUpdate
+    public void onPreUpdate() {
+        VoucherModified voucherModified = new VoucherModified(this);
+        voucherModified.publishAfterCommit();
+    }
 
     public static VoucherRepository repository() {
         VoucherRepository voucherRepository = VoucherApplication.applicationContext.getBean(

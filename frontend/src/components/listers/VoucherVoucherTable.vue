@@ -67,6 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "name", value: "name" },
                     { text: "totalIssuedAmount", value: "totalIssuedAmount" },
                     { text: "currentIssuedAmount", value: "currentIssuedAmount" },
                     { text: "status", value: "status" },
@@ -87,6 +88,7 @@
             this.values = temp.data._embedded.vouchers;
 
             this.newValue = {
+                'name': '',
                 'totalIssuedAmount': 0,
                 'currentIssuedAmount': 0,
                 'status': '',

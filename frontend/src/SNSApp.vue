@@ -82,29 +82,6 @@
                     </v-list-item>
 
 
-                    <v-list-item
-                        class="px-2"
-                        key="notifications"
-                        to="/notifications/notifications"
-                        @click="changeUrl()"
-                        color="primary"
-                        style="font-weight:700;"
-                    >
-                        Notification
-                    </v-list-item>
-
-
-
-                    <v-list-item
-                        class="px-2"
-                        key="customerLimits"
-                        to="/customerlimits/customerLimits"
-                        @click="changeUrl()"
-                        color="primary"
-                        style="font-weight:700;"
-                    >
-                        CustomerLimit
-                    </v-list-item>
 
 
                 </v-list>
@@ -187,14 +164,14 @@ export default {
         aggregate: [
             { 
                 title: 'Purchase', 
-                description: 'status(구매요청,취소요청)', 
+                description: 'status(구매요청,구매취소요청,결제완료,결제취소)', 
                 key: 'purchases', 
                 route: '/purchases/purchases',
                 ImageUrl: '',
             },
             { 
                 title: 'Voucher', 
-                description: 'Voucher: 상태(사용 가능, 취소됨), 총 발행 금액', 
+                description: 'Voucher 상태(판매가능,판매불가)', 
                 key: 'vouchers', 
                 route: '/vouchers/vouchers',
                 ImageUrl: '',
@@ -211,20 +188,6 @@ export default {
                 description: 'status: 결제 상태 (승인, 취소)', 
                 key: 'payments', 
                 route: '/payments/payments',
-                ImageUrl: '',
-            },
-            { 
-                title: 'Notification', 
-                description: '', 
-                key: 'notifications', 
-                route: '/notifications/notifications',
-                ImageUrl: '',
-            },
-            { 
-                title: 'CustomerLimit', 
-                description: '', 
-                key: 'customerLimits', 
-                route: '/customerlimits/customerLimits',
                 ImageUrl: '',
             },
             

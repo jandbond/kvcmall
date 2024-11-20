@@ -9,7 +9,7 @@
             <v-row>
                 <v-list-item class="d-flex" style="background-color: white;">
                     <h1 class="align-self-center ml-3">Voucher</h1>
-                    <div class="secondary-text-color" style="margin-left:30px;">Voucher: 상태(사용 가능, 취소됨), 총 발행 금액</div>
+                    <div class="secondary-text-color" style="margin-left:30px;">Voucher 상태(판매가능,판매불가)</div>
                 </v-list-item>
             </v-row>
         </v-card>
@@ -104,6 +104,7 @@
             me.values = temp.data._embedded.vouchers;
             
             me.newValue = {
+                'name': '',
                 'totalIssuedAmount': 0,
                 'currentIssuedAmount': 0,
                 'status': '',

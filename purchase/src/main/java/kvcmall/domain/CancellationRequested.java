@@ -12,6 +12,11 @@ import lombok.*;
 public class CancellationRequested extends AbstractEvent {
 
     private Long id;
+    private String customerId;
+    private String voucherId;
+    private Long amount;
+    private Date date;
+    private String status;
 
     public CancellationRequested(Purchase aggregate) {
         super(aggregate);

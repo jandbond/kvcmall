@@ -45,6 +45,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -52,6 +53,7 @@
                             [ CustomerId :  {{data.customerId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ VoucherId :  {{data.voucherId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Amount :  {{data.amount }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Date :  {{data.date }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -120,9 +122,10 @@
             this.values = temp.data._embedded.purchases;
             
             this.newValue = {
-                'customerId': '',
-                'voucherId': '',
+                'customerId': 0,
+                'voucherId': 0,
                 'amount': 0,
+                'date': '2024-11-20',
                 'status': '',
             }
         },

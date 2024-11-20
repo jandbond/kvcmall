@@ -25,14 +25,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='PaymentApproved'"
+        condition = "headers['type']=='PaymentCompleted'"
     )
-    public void wheneverPaymentApproved_IssueVoucher(
-        @Payload PaymentApproved paymentApproved
+    public void wheneverPaymentCompleted_IssueVoucher(
+        @Payload PaymentCompleted paymentCompleted
     ) {
-        PaymentApproved event = paymentApproved;
+        PaymentCompleted event = paymentCompleted;
         System.out.println(
-            "\n\n##### listener IssueVoucher : " + paymentApproved + "\n\n"
+            "\n\n##### listener IssueVoucher : " + paymentCompleted + "\n\n"
         );
 
         // Sample Logic //
@@ -41,14 +41,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='PaymentCancled'"
+        condition = "headers['type']=='PaymentCanceled'"
     )
-    public void wheneverPaymentCancled_CancelVoucher(
-        @Payload PaymentCancled paymentCancled
+    public void wheneverPaymentCanceled_CancelVoucher(
+        @Payload PaymentCanceled paymentCanceled
     ) {
-        PaymentCancled event = paymentCancled;
+        PaymentCanceled event = paymentCanceled;
         System.out.println(
-            "\n\n##### listener CancelVoucher : " + paymentCancled + "\n\n"
+            "\n\n##### listener CancelVoucher : " + paymentCanceled + "\n\n"
         );
 
         // Sample Logic //

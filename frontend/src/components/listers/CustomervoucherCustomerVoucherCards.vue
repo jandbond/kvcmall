@@ -104,9 +104,10 @@
             me.values = temp.data._embedded.customerVouchers;
             
             me.newValue = {
-                'customerId': '',
-                'voucherId': '',
-                'issuedDate': '2024-11-20',
+                'customerId': 0,
+                'voucherId': 0,
+                'amount': 0,
+                'date': '2024-11-20',
                 'status': '',
             }
         },

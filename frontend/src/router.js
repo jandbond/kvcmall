@@ -17,12 +17,7 @@ import CustomervoucherCustomerVoucherDetail from "./components/listers/Customerv
 import PaymentPaymentManager from "./components/listers/PaymentPaymentCards"
 import PaymentPaymentDetail from "./components/listers/PaymentPaymentDetail"
 
-import NotificationNotificationManager from "./components/listers/NotificationNotificationCards"
-import NotificationNotificationDetail from "./components/listers/NotificationNotificationDetail"
 
-
-import CustomerlimitCustomerLimitManager from "./components/listers/CustomerlimitCustomerLimitCards"
-import CustomerlimitCustomerLimitDetail from "./components/listers/CustomerlimitCustomerLimitDetail"
 
 
 export default new Router({
@@ -73,28 +68,7 @@ export default new Router({
                 component: PaymentPaymentDetail
             },
 
-            {
-                path: '/notifications/notifications',
-                name: 'NotificationNotificationManager',
-                component: NotificationNotificationManager
-            },
-            {
-                path: '/notifications/notifications/:id',
-                name: 'NotificationNotificationDetail',
-                component: NotificationNotificationDetail
-            },
 
-
-            {
-                path: '/customerlimits/customerLimits',
-                name: 'CustomerlimitCustomerLimitManager',
-                component: CustomerlimitCustomerLimitManager
-            },
-            {
-                path: '/customerlimits/customerLimits/:id',
-                name: 'CustomerlimitCustomerLimitDetail',
-                component: CustomerlimitCustomerLimitDetail
-            },
 
 
 

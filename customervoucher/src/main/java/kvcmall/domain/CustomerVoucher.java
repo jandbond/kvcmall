@@ -19,11 +19,13 @@ public class CustomerVoucher {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String customerId;
+    private Long customerId;
 
-    private String voucherId;
+    private Long voucherId;
 
-    private Date issuedDate;
+    private Long amount;
+
+    private Date date;
 
     private String status;
 
@@ -44,7 +46,7 @@ public class CustomerVoucher {
     }
 
     //<<< Clean Arch / Port Method
-    public static void issueVoucher(PaymentApproved paymentApproved) {
+    public static void issueVoucher(PaymentCompleted paymentCompleted) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -57,7 +59,7 @@ public class CustomerVoucher {
 
         /** Example 2:  finding and process
         
-        repository().findById(paymentApproved.get???()).ifPresent(customerVoucher->{
+        repository().findById(paymentCompleted.get???()).ifPresent(customerVoucher->{
             
             customerVoucher // do something
             repository().save(customerVoucher);
@@ -72,7 +74,7 @@ public class CustomerVoucher {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void cancelVoucher(PaymentCancled paymentCancled) {
+    public static void cancelVoucher(PaymentCanceled paymentCanceled) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -85,7 +87,7 @@ public class CustomerVoucher {
 
         /** Example 2:  finding and process
         
-        repository().findById(paymentCancled.get???()).ifPresent(customerVoucher->{
+        repository().findById(paymentCanceled.get???()).ifPresent(customerVoucher->{
             
             customerVoucher // do something
             repository().save(customerVoucher);

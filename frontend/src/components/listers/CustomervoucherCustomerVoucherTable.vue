@@ -69,7 +69,8 @@
                     { text: "id", value: "id" },
                     { text: "customerId", value: "customerId" },
                     { text: "voucherId", value: "voucherId" },
-                    { text: "issuedDate", value: "issuedDate" },
+                    { text: "amount", value: "amount" },
+                    { text: "date", value: "date" },
                     { text: "status", value: "status" },
                 ],
             customerVoucher : [],
@@ -88,9 +89,10 @@
             this.values = temp.data._embedded.customervouchers;
 
             this.newValue = {
-                'customerId': '',
-                'voucherId': '',
-                'issuedDate': '2024-11-20',
+                'customerId': 0,
+                'voucherId': 0,
+                'amount': 0,
+                'date': '2024-11-20',
                 'status': '',
             }
         },

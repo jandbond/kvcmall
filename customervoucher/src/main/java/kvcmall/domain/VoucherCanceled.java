@@ -12,6 +12,11 @@ import lombok.*;
 public class VoucherCanceled extends AbstractEvent {
 
     private Long id;
+    private String customerId;
+    private String voucherId;
+    private Long amount;
+    private Date issuedDate;
+    private String status;
 
     public VoucherCanceled(CustomerVoucher aggregate) {
         super(aggregate);

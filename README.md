@@ -25,8 +25,7 @@ See the README.md files inside the each microservices directory:
 - customervoucher
 - payment
 - notification
-- customerpage
-- customerlimit
+- mypage
 
 
 ## Run API Gateway (Spring Gateway)
@@ -38,30 +37,25 @@ mvn spring-boot:run
 ## Test by API
 - purchase
 ```
- http :8088/purchases id="id" customerId="customerId" voucherId="voucherId" amount="amount" status="status" 
+ http :8088/purchases id="id" customerId="customerId" voucherId="voucherId" amount="amount" date="date" status="status" 
 ```
 - voucher
 ```
- http :8088/vouchers id="id" totalIssuedAmount="totalIssuedAmount" currentIssuedAmount="currentIssuedAmount" status="status" 
+ http :8088/vouchers id="id" name="name" totalIssuedAmount="totalIssuedAmount" currentIssuedAmount="currentIssuedAmount" status="status" 
 ```
 - customervoucher
 ```
- http :8088/customerVouchers id="id" customerId="customerId" voucherId="voucherId" issuedDate="issuedDate" status="status" 
+ http :8088/customerVouchers id="id" customerId="customerId" voucherId="voucherId" amount="amount" date="date" status="status" 
 ```
 - payment
 ```
- http :8088/payments id="id" status="status" 
+ http :8088/payments id="id" purchaseId="purchaseId" status="status" 
 ```
 - notification
 ```
- http :8088/notifications id="id" msg="msg" sentAt="sentAt" 
 ```
-- customerpage
+- mypage
 ```
-```
-- customerlimit
-```
- http :8088/customerLimits id="id" maximumLimit="maximumLimit" currentLimit="currentLimit" 
 ```
 
 

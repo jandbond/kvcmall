@@ -7,5 +7,6 @@ import lombok.Data;
 public class Payment {
 
     private Long id;
+    private Long purchaseId;
     private String status;
 }

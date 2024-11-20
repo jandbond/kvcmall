@@ -19,6 +19,8 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private Long purchaseId;
+
     private String status;
 
     @PostPersist

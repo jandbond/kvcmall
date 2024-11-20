@@ -16,9 +16,10 @@
         </v-card-title >        
 
         <v-card-text style="background-color: white;">
-            <String label="CustomerId" v-model="value.customerId" :editMode="editMode" :inputUI="''"/>
-            <String label="VoucherId" v-model="value.voucherId" :editMode="editMode" :inputUI="''"/>
+            <Number label="CustomerId" v-model="value.customerId" :editMode="editMode" :inputUI="''"/>
+            <Number label="VoucherId" v-model="value.voucherId" :editMode="editMode" :inputUI="''"/>
             <Number label="Amount" v-model="value.amount" :editMode="editMode" :inputUI="''"/>
+            <Date label="Date" v-model="value.date" :editMode="editMode" :inputUI="''"/>
             <String label="Status" v-model="value.status" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
